@@ -35,4 +35,3 @@ int main(){
     S2.enrollmentno=69;
     S2.getcr();
     return 0;}
-
