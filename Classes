@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class student
+{ public:
+    int rollno;
+    string name;
+    float marks;
+    void getstudent(){
+        cout<<"Rollno. is "<<rollno;
+        cout<<"Name is "<<name;
+        cout<<"Marks = "<<marks;
+    }
+};
+int main(){
+    student S1;
+    S1.rollno=876;
+    S1.name="Trump";
+    S1.marks=97;
+    S1.getstudent();
+    return 0;
+
+}
