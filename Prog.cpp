@@ -6,6 +6,7 @@ class person{
     int age;
     string name;
     string occupation;
+    string qualification;
     void setperson(){
         cout<<"Enter name: ";
         getline(cin,name);
@@ -13,16 +14,19 @@ class person{
         cin>>age;
         cout<<"Enter occupation: ";
         cin>>occupation;
+        cout<<"Enter qualification: ";
+        cin>>qualification;
     }
     void showperson(){
         cout<<"Name: "<<name<<endl;
         cout<<"Age: "<<age<<endl;
         cout<<"Occupation: "<<occupation<<endl;
+        cout<<"Qualification: "<<qualification<<endl;
     }
     void editperson(){
         int n;
         cout<<"Which detail would you like to edit ?"<<endl;
-        cout<<"Press 1 for Name, 2 for Age, 3 for Occupation: ";
+        cout<<"Press 1 for Name, 2 for Age, 3 for Occupation, 4 for qualification: ";
         cin>>n;
         if(n==1){
             cout<<"Enter name: ";
@@ -36,9 +40,15 @@ class person{
             cout<<"Enter occupation: ";
             cin>>occupation;
         }
-        else{
-            cout<<"Invalid input";
+        if(n==4){
+            cout<<"Enter qualification: ";
+            cin>>qualification;
         }
+        else{
+            cout<<"Invalid input"<<endl;
+        }
+        cout<<"Updated details:"<<endl;
+        showperson();
     }
 };
 int main(){
@@ -50,8 +60,6 @@ int main(){
     cin>>decision;
     if(decision=="n"){
         p1.editperson();
-        cout<<"Updated details:"<<endl;
-        p1.showperson();
     }
     return 0;
 }
