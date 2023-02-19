@@ -39,11 +39,7 @@ class person{
         else{
             cout<<"Invalid input";
         }
-
     }
-
-
-
 };
 int main(){
     string decision;
@@ -57,5 +53,5 @@ int main(){
         cout<<"Updated details:"<<endl;
         p1.showperson();
     }
-
+    return 0;
 }
