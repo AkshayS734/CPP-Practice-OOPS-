@@ -32,16 +32,16 @@ class person{
             cout<<"Enter name: ";
             getline(cin,name);
         }
-        if(n==2){
+        else if(n==2){
             cout<<"Enter age: ";
             cin>>age;
         }    
-        if(n==3){
+        else if(n==3){
             cout<<"Enter occupation: ";
             cin>>occupation;
         }
-        if(n==4){
-            cout<<"Enter qualification: ";
+        else if(n==4){
+            cout<<"Enter qualification/persuing: ";
             cin>>qualification;
         }
         else{
@@ -51,6 +51,27 @@ class person{
         showperson();
     }
 };
+class Student:person{
+        private:
+        int rollno;
+        char institutename[100];
+        int years;
+        public:
+        void setstudent(){
+            cout<<"Enter institute name: ";
+            fflush(stdin);
+            cin.getline(institutename,100);
+            cout<<"Enter enrollment number: ";
+            cin>>rollno;
+            cout<<"Enter years: ";
+            cin>>years;
+        }
+        void showstudent(){
+            cout<<"Institute name: "<<institutename<<endl;
+            cout<<"Enrollment number: "<<rollno<<endl;
+            cout<<"Years: "<<years<<endl;
+        }
+    };
 int main(){
     string decision;
     person p1;
@@ -60,6 +81,14 @@ int main(){
     cin>>decision;
     if(decision=="n"){
         p1.editperson();
+    }
+    if(p1.occupation=="Student"||p1.occupation=="student"||p1.occupation=="STUDENT"){
+        Student s1;
+        s1.setstudent();
+        cout<<"Name: "<<p1.name<<endl;
+        cout<<"Age: "<<p1.age<<endl;
+        cout<<"Persuing: "<<p1.qualification<<endl;
+        s1.showstudent();
     }
     return 0;
 }
