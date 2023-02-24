@@ -20,6 +20,7 @@ int main(){
     person1.setwhy();
     person1.getwhy();
     cout<<"Thanks for using";
+    
     return 0;
 
 }
