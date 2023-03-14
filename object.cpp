@@ -11,6 +11,7 @@ class complex{
     complex(int r,int i){
         real=r;
         imag=i;
+        
     }
     complex operator +(complex c){
         complex temp;
