@@ -15,7 +15,6 @@ class questions{
 };
 
 int main(){
-    cout<<"Hello"<<endl;
     questions person1;
     person1.setwhy();
     person1.getwhy();
